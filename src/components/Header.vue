@@ -1,7 +1,7 @@
 <template>
     <div>
       <header>
-        <nav class="bg-white bg-gradient-to-br from-blue-950 to-purple-900 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+        <nav class="bg-blue-400  from-blue-950 lg:px-6 py-2.5 dark:bg-gray-800">
           <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <!-- Logo -->
             <a href="#" class="flex items-center">

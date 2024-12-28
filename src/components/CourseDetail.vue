@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen bg-gradient-to-b from-indigo-500 to-purple-700 p-6">
+    <div class="min-h-screen bg-gradient-to-b from-blue-900 p-6">
       <header class="mb-10">
         <button @click="goBack" class="text-white text-2xl">← Back</button>
         <h1 class="text-white text-3xl font-bold tracking-wide mt-4">{{ courseName }} Details</h1>
