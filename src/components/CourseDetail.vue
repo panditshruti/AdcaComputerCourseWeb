@@ -1,28 +1,69 @@
 <template>
-    <div class="min-h-screen bg-gradient-to-b from-blue-900 p-6">
-      <header class="mb-10">
-        <button @click="goBack" class="text-white text-2xl">← Back</button>
-        <h1 class="text-white text-3xl font-bold tracking-wide mt-4">{{ courseName }} Details</h1>
-      </header>
-      <div class="bg-white rounded-xl shadow-md p-6">
-        <p class="text-lg text-gray-800">Course details for {{ courseName }} will go here.</p>
-        <!-- Add more course details here -->
+  <div class="min-h-screen bg-gray-100 py-12">
+    <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Our Services</h2>
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+      <div v-for="(service, index) in services" :key="index" class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
+        <img :src="service.image" alt="Service Image" class="w-24 h-24 mx-auto mb-4 rounded-full" />
+        <h3 class="text-xl font-semibold text-white">{{ service.title }}</h3>
+       
       </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    props: ['courseName'], // Declare the 'courseName' prop
-    methods: {
-      goBack() {
-        this.$router.go(-1); // Go back to the previous page
-      },
-    },
-  };
-  </script>
-  
-  <style scoped>
-  /* Optional styles for CourseDetail.vue */
-  </style>
-  
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      services: [
+        {
+          image: require("@/assets/adcaiuyt.png"), // Load image from assets folder
+          title: "ADCA",
+          description: "Get your passport size photo printed in high quality.",
+        },
+        {
+          image: require("@/assets/dca.png"),// Replace with an actual image URL if needed
+          title: "DCA",
+          description: "Get your Aadhaar card printed on PVC plastic.",
+        },
+        {
+          image: require("@/assets/dtp.png"),
+          title: "DTP",
+          description: "Get your bank passbook printed with your latest transactions.",
+        },
+        {
+          image: require("@/assets/quizoption.png"),
+          title: "Quiz",
+          description: "Get your bank passbook printed with your latest transactions.",
+        },
+        {
+          image: require("@/assets/typing.png"),
+          title: "Typing Code",
+          description: "Get your bank passbook printed with your latest transactions.",
+        },
+        {
+          image: require("@/assets/youtube.png"),
+          title: "Ch-Videos",
+          description: "Get your bank passbook printed with your latest transactions.",
+        },
+        {
+          image: require("@/assets/shortceky.png"),
+          title: "ShortCut Key",
+          description: "Get your bank passbook printed with your latest transactions.",
+        },
+      
+        {
+          image: require("@/assets/questiontype.png"),
+          title: "MCQ",
+          description: "Get your bank passbook printed with your latest transactions.",
+        },
+      ],
+    
+    };
+  },
+};
+</script>
+
+<style scoped>
+/* Add custom styles if needed */
+</style>
